@@ -1,0 +1,32 @@
+.parent {
+display: grid;
+grid-template-columns: repeat(7, 1fr);
+grid-template-rows: repeat(7, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 8; }
+.div2 { grid-area: 2 / 1 / 7 / 5; }
+.div3 { grid-area: 2 / 5 / 7 / 8; }
+.div4 { grid-area: 7 / 1 / 8 / 8; }
+
+
+h4{
+font-size:50px;
+}
+
+*{
+
+}
+
+body{
+background-image: url('flowers.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+
+
+
+
