@@ -1,66 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" content="with=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideal Match - Create your perfect outfit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
 
-
-<section class="header" id="header">
-    <nav>
-        <a href="index.html"><img src="images/logo.jpg"</a>
-        <div class="nav-links">
-            <ul>
-                <li><a href="">Features</a></li>
-                <li><a href="">FAQ</a></li>
-                <li><a href="">How it works</a></li>
-                <li><a href="">About us</a></li>
-                <li><a href="">Thoughts</a></li>
-            </ul>
+    <header class="navbar">
+        <div class="logo-container">
+            <span class="logo-text">Ideal Match</span>
+            <img src="image_4ecb6a.png" alt="Ideal Match Logo" class="logo-img">
         </div>
-    </nav>
-    <section>
+        <nav class="nav-links">
+            <a href="#">Features</a>
+            <a href="#">FAQ</a>
+            <a href="#">How it works</a>
+            <a href="#">About us</a>
+            <a href="#">Thoughts</a>
+        </nav>
+        <button class="btn-nav-signup">Sign up</button>
+    </header>
 
+    <main class="hero-container">
+        <div class="hero-card">
 
+            <div class="hero-content">
+                <h1>Create your perfect outfit <br>from your own wardrobe, <br><span>without the stress</span></h1>
 
+                <p class="hero-description">
+                    Ideal Match turns your wardrobe into outfits that actually work. <br>
+                    They are styled for your day, your mood, and the weather.
+                </p>
 
+                <ul class="features-list">
+                    <li>Tarot style outfit generator</li>
+                    <li>upload and shuffle your own digital wardrobe, and find your ideal outfit.</li>
+                    <li>Visual try-on feature</li>
+                    <li>Weekly outfit planner</li>
+                </ul>
 
+                <form class="signup-form" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="you@example.com" required class="email-input">
+                    <button type="submit" class="btn-submit">Sign Up</button>
+                </form>
+            </div>
 
+            <div class="hero-visuals">
+                <div class="heart-badge">
+                    <div class="arrow-left">🏹</div>
+                    <div class="heart-shape">
+                        <span>Perfect Match!</span>
+                    </div>
+                </div>
 
-<h4>Ideal Match</h4>
-<img src="images\yellow.jpeg" alt="Girl in a jacket" width="500">
-<h2>Features</h2>
-<div class="parent">
-<div class="div1">
+                <div class="phone-wrapper">
+                    <div class="phone-shadow-card"></div>
+                    <div class="phone-device">
+                        <div class="phone-header">Your wardrobe</div>
 
-<p>text</p>
+                        <div class="wardrobe-display">
+                            <div class="item-slot">
+                                <div class="nav-arrow left">◀◀</div>
+                                <div class="item-image-placeholder">🧥</div>
+                                <div class="nav-arrow right">▶▶</div>
+                            </div>
 
-</div>
+                            <div class="item-slot">
+                                <div class="nav-arrow left">◀◀</div>
+                                <div class="item-image-placeholder">👗</div>
+                                <div class="nav-arrow right">▶▶</div>
+                            </div>
+                        </div>
 
+                        <div class="phone-footer">
+                            <button class="phone-btn text-btn">Browse</button>
+                            <div class="shoes-icon">👠</div>
+                            <button class="phone-btn action-btn">Dress Me</button>
+                        </div>
 
-<div class="div2">
-<p>text</p>
-</div>
+                        <div class="pointer-hand">🫵</div>
+                    </div>
+                </div>
+            </div>
 
-
-
-
-<div class="div3">
-
-<p>text</p>
-</div>
-
-
-<div class="div4">
-<p>text</p>
-
-</div>
-
-</div>
+        </div>
+    </main>
 
 </body>
 </html>

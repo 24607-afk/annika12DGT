@@ -1,52 +1,352 @@
-.parent {
-display: grid;
-grid-template-columns: repeat(7, 1fr);
-grid-template-rows: repeat(7, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
+/* --- CSS Reset & Variables --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.div1 { grid-area: 1 / 1 / 2 / 8; }
-.div2 { grid-area: 2 / 1 / 7 / 5; }
-.div3 { grid-area: 2 / 5 / 7 / 8; }
-.div4 { grid-area: 7 / 1 / 8 / 8; }
-
-
-h4{
-font-size:50px;
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: #ffffff;
+    overflow-x: hidden;
 }
 
-*{
-
+/* --- Navigation Bar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: transparent;
 }
 
-body{
-background-image: url('flowers.jpg');
-background-repeat: no-repeat;
-background-size: cover;
-background-attachment: fixed;
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
 }
-nav{
- display: flex;
- padding: 2% 6%;
- justify-content: space-between;
- align-items: center;
- }
- nav img{
- width: 150px;
- }
- .nav-links{
- flex: 1;
- text-align: right;
- }
- ,nav links ul li{
- list-style: none;
- display: inline-block;
- padding: 8px 12px
- position: relative;
- }
 
+.logo-icon {
+    font-size: 22px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+.btn-nav-signup {
+    background-color: #ffe6eb;
+    color: #4a154b;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* --- Hero Section Container --- */
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 60px;
+    min-height: calc(100vh - 90px);
+}
+
+/* Purple Main Card Graphic */
+.hero-card {
+    background: linear-gradient(135deg, #4c0d55 0%, #881b99 50%, #e652f7 100%);
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 24px;
+    padding: 60px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* --- Left Side: Typography & Text Content --- */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.hero-content h1 span {
+    font-style: italic;
+}
+
+.hero-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    opacity: 0.9;
+}
+
+.features-list {
+    list-style-type: none;
+    margin-bottom: 40px;
+}
+
+.features-list li {
+    font-size: 15px;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 20px;
+    opacity: 0.85;
+}
+
+/* Small bullet design match */
+.features-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+}
+
+/* Form Styling */
+.signup-form {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.email-input {
+    background-color: #ffe4f0;
+    border: none;
+    padding: 16px 28px;
+    border-radius: 30px 0 30px 30px; /* Matching the custom skewed shape */
+    width: 280px;
+    font-size: 15px;
+    color: #4a154b;
+    outline: none;
+}
+
+.email-input::placeholder {
+    color: #4a154b;
+    opacity: 0.7;
+}
+
+.btn-submit {
+    background-color: #9c27b0;
+    color: white;
+    border: 2px solid rgba(255,255,255,0.2);
+    padding: 16px 36px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #b338c9;
+}
+
+/* --- Right Side: Visual Components & Phone UI --- */
+.hero-visuals {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Perfect Match Heart Tag */
+.heart-badge {
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+}
+
+.heart-shape {
+    background-color: #e63946;
+    padding: 20px;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.2;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transform: rotate(-5deg);
+}
+
+.arrow-left {
+    font-size: 32px;
+    margin-right: -15px;
+    transform: rotate(-15deg);
+}
+
+/* Phone Layout Setup */
+.phone-wrapper {
+    position: relative;
+    width: 260px;
+    height: 440px;
+}
+
+/* Background stacked angled card */
+.phone-shadow-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #2b0433;
+    border-radius: 24px;
+    transform: rotate(-10deg);
+    top: 10px;
+    left: -15px;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.phone-device {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: #190122;
+    border: 8px solid #ffffff;
+    border-radius: 28px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    transform: rotate(5deg);
+}
+
+.phone-header {
+    color: #a8a8a8;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+/* Clothes selector design template */
+.wardrobe-display {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.item-slot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0b0010;
+    border-radius: 12px;
+    padding: 10px;
+    height: 120px;
+}
+
+.item-image-placeholder {
+    font-size: 50px;
+}
+
+.nav-arrow {
+    font-size: 11px;
+    color: #9c27b0;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Bottom phone interactive controls */
+.phone-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.phone-btn {
+    border: none;
+    border-radius: 14px;
+    padding: 8px 14px;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.text-btn {
+    background-color: #4a1256;
+    color: #ff99f5;
+}
+
+.action-btn {
+    background-color: #c134d1;
+    color: white;
+}
+
+.shoes-icon {
+    font-size: 24px;
+}
+
+/* Animated clicking indicator hand */
+.pointer-hand {
+    position: absolute;
+    bottom: -15px;
+    right: -25px;
+    font-size: 38px;
+    transform: rotate(-35deg);
+    z-index: 5;
+}
+
+/* Responsive Scaling Design Rules */
+@media (max-width: 992px) {
+    .hero-card {
+        grid-template-columns: 1fr;
+        padding: 40px;
+    }
+    .hero-visuals {
+        margin-top: 40px;
+    }
+    .navbar {
+        padding: 20px;
+    }
+}
 
 
