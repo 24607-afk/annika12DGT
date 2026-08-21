@@ -2,94 +2,350 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ideal Match - Create your perfect outfit</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta name="viewport" contet="widtfh=device-width, initial-scale=1.0">
+    <title>Ideal Match NZ</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo-container">
-            <span class="logo-text">Ideal Match</span>
-            <img src="image_4ecb6a.png" alt="Ideal Match Logo" class="logo-img">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="#" class="logo-container">
+            <strong>Ideal Match NZ</strong>
+        </a>
+        <div class="nav-links">
+            <a href="#features-modal">Features</a>
+            <a href="#tarot-modal">FAQ</a>
+            <a href="#features-modal">About us</a>
+            <a href="#tarot-modal">Thoughts</a>
         </div>
-        <nav class="nav-links">
-            <a href="#">Features</a>
-            <a href="#">FAQ</a>
-            <a href="#">How it works</a>
-            <a href="#">About us</a>
-            <a href="#">Thoughts</a>
-        </nav>
-        <button class="btn-nav-signup">Sign up</button>
-    </header>
+        <a href="#features-modal" class="btn-nav-signup">Sign Up / Open App</a>
+    </nav>
 
+    <!-- Hero Section -->
     <main class="hero-container">
         <div class="hero-card">
-
             <div class="hero-content">
-                <h1>Create your perfect outfit <br>from your own wardrobe, <br><span>without the stress</span></h1>
-
-                <p class="hero-description">
-                    Ideal Match turns your wardrobe into outfits that actually work. <br>
-                    They are styled for your day, your mood, and the weather.
-                </p>
+                <h1>Create your perfect outfit from your own wardrobe, without the stress</h1>
+                <p class="hero-description">Ideal Match turns your wardrobe into outfits that actually work. They are styled for your day, your mood, and the weather in NZ.</p>
 
                 <ul class="features-list">
-                    <li>Tarot style outfit generator</li>
-                    <li>upload and shuffle your own digital wardrobe, and find your ideal outfit.</li>
-                    <li>Visual try-on feature</li>
-                    <li>Weekly outfit planner</li>
+                    <li>90s Tarot style outfit generator</li>
+                    <li>Upload and shuffle your own digital wardrobe</li>
+                    <li>Interactive full-body avatar virtual try-on</li>
+                    <li>Weekly NZ outfit planner</li>
                 </ul>
 
-                <form class="signup-form" onsubmit="event.preventDefault();">
-                    <input type="email" placeholder="you@example.com" required class="email-input">
+                <form class="signup-form" onsubmit="event.preventDefault(); window.location.href='#features-modal';">
+                    <input type="email" placeholder="you@example.co.nz" class="email-input" required>
                     <button type="submit" class="btn-submit">Sign Up</button>
                 </form>
             </div>
 
             <div class="hero-visuals">
                 <div class="heart-badge">
-                    <div class="arrow-left">🏹</div>
-                    <div class="heart-shape">
-                        <span>Perfect Match!</span>
-                    </div>
+                    <span class="arrow-left">➔</span>
+                    <div class="heart-shape">Perfect<br>Match!</div>
                 </div>
 
                 <div class="phone-wrapper">
-                    <div class="phone-shadow-card"></div>
-                    <div class="phone-device">
-                        <div class="phone-header">Your wardrobe</div>
-
-                        <div class="wardrobe-display">
-                            <div class="item-slot">
-                                <div class="nav-arrow left">◀◀</div>
-                                <div class="item-image-placeholder">🧥</div>
-                                <div class="nav-arrow right">▶▶</div>
-                            </div>
-
-                            <div class="item-slot">
-                                <div class="nav-arrow left">◀◀</div>
-                                <div class="item-image-placeholder">👗</div>
-                                <div class="nav-arrow right">▶▶</div>
-                            </div>
-                        </div>
-
-                        <div class="phone-footer">
-                            <button class="phone-btn text-btn">Browse</button>
-                            <div class="shoes-icon">👠</div>
-                            <button class="phone-btn action-btn">Dress Me</button>
-                        </div>
-
-                        <div class="pointer-hand">🫵</div>
+                    <div class="phone-header">Your Wardrobe (NZ)</div>
+                    <div class="wardrobe-display">
+                        <img src="assets/jacket.png" alt="Jacket" class="shoes-icon" style="height: 45px;">
+                        <img src="assets/prada skirt.png" alt="Skirt" class="shoes-icon" style="height: 40px;">
+                        <img src="assets/heels.png" alt="Heels" class="shoes-icon" style="height: 30px;">
+                    </div>
+                    <div class="phone-footer">
+                        <a href="#shuffler-modal" class="phone-btn text-btn">Browse</a>
+                        <a href="#tryon-modal" class="phone-btn action-btn">Dress Me</a>
                     </div>
                 </div>
-            </div>
 
+                <img src="assets/hand point.png" alt="Pointer" class="pointer-hand">
+            </div>
         </div>
     </main>
+
+    <!-- Why it matters section -->
+    <section class="why-matters-section">
+        <div class="pill-header">Why it matters ?</div>
+        <div class="section-title-wrapper">
+            <img src="assets/capybara.png" alt="Mascot" class="capybara-img">
+            <h2 class="main-title">Your style, simplified</h2>
+        </div>
+        <div class="grid-container">
+            <div class="info-card">
+                <h3>Save Morning Time</h3>
+                <p>Stop staring at a full closet wondering what to wear. Pre-curated combinations take the guesswork out of your morning routine.</p>
+            </div>
+            <div class="info-card">
+                <h3>Weather-Adaptive</h3>
+                <p>Tailored specifically for New Zealand's four-seasons-in-one-day climate so you're never caught out in the southerly chill.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="brand-col">
+                <h3>Ideal Match NZ</h3>
+                <p>Your digital closet assistant inspired by 90s classic styling, built for modern wardrobes.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#features-modal">Hub</a></li>
+                    <li><a href="#shuffler-modal">Closet Shuffler</a></li>
+                    <li><a href="#tarot-modal">Tarot Cards</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Features</h4>
+                <ul>
+                    <li><a href="#tryon-modal">Visual Try-On</a></li>
+                    <li><a href="#planner-modal">Weekly Planner</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ideal Match NZ. All rights reserved.</p>
+            <a href="#features-modal">Back to Top ↑</a>
+        </div>
+    </footer>
+
+    <!-- ================= MODALS SYSTEM ================= -->
+
+    <!-- 1. FEATURES HUB MODAL -->
+    <div id="features-modal" class="modal-overlay">
+        <div class="modal-card">
+            <a href="#" class="close-modal-btn">&times;</a>
+            <div class="unlocked-badge">✨ Unlocked Member Features</div>
+            <h2 class="main-title" style="text-align: center; margin: 15px 0 5px 0;">Ideal Match NZ Hub</h2>
+            <p style="text-align: center; color: #b3a2c7; font-size: 13px; margin-bottom: 20px;">Your account is active! Choose a feature to explore:</p>
+
+            <div class="features-grid">
+                <a href="#shuffler-modal" class="feature-card-item">
+                    <h3 style="font-size: 16px; margin-bottom: 6px;">👗 Retro Closet Shuffler</h3>
+                    <p style="font-size: 12px; color: #b3a2c7;">Mix & match tops & bottoms in 90s screen style.</p>
+                </a>
+                <a href="#tryon-modal" class="feature-card-item">
+                    <h3 style="font-size: 16px; margin-bottom: 6px;">💃 Visual Try-On Avatar</h3>
+                    <p style="font-size: 12px; color: #b3a2c7;">Preview your outfit worn by a full-body model avatar.</p>
+                </a>
+                <a href="#tarot-modal" class="feature-card-item">
+                    <h3 style="font-size: 16px; margin-bottom: 6px;">🔮 Daily Tarot Suggestion</h3>
+                    <p style="font-size: 12px; color: #b3a2c7;">Get daily outfit mood cards based on your vibe.</p>
+                </a>
+                <a href="#planner-modal" class="feature-card-item">
+                    <h3 style="font-size: 16px; margin-bottom: 6px;">📅 Weekly NZ Planner</h3>
+                    <p style="font-size: 12px; color: #b3a2c7;">Organise Monday–Saturday Auckland weather & looks.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. RETRO CLOSET SHUFFLER MODAL -->
+    <div id="shuffler-modal" class="modal-overlay">
+        <div class="modal-card retro-monitor-outer">
+            <a href="#features-modal" class="close-modal-btn">&times;</a>
+
+            <div class="clueless-monitor">
+                <div class="monitor-top-bar">
+                    <span class="top-title">CHER'S WARDROBE</span>
+                    <span class="top-title right">FALL FASHIONS</span>
+                </div>
+
+                <div class="clueless-screen-grid">
+                    <div class="leopard-side-panel"></div>
+
+                    <div class="center-wardrobe-column">
+                        <div class="clueless-slot-box">
+                            <div class="slot-image-area">
+                                <img src="assets/jacket.png" alt="Jacket" class="garment-img">
+                            </div>
+                        </div>
+                        <div class="embedded-arrow-bar">
+                            <button class="retro-arrow-btn">◀◀</button>
+                            <button class="retro-arrow-btn">▶</button>
+                            <button class="retro-arrow-btn">▶▶</button>
+                        </div>
+
+                        <div class="clueless-slot-box">
+                            <div class="slot-image-area">
+                                <img src="assets/prada skirt.png" alt="Skirt" class="garment-img">
+                            </div>
+                        </div>
+                        <div class="embedded-arrow-bar">
+                            <button class="retro-arrow-btn">◀◀</button>
+                            <button class="retro-arrow-btn">▶</button>
+                            <button class="retro-arrow-btn">▶▶</button>
+                        </div>
+
+                        <div class="bottom-action-buttons-row">
+                            <a href="#shuffler-modal" class="retro-3d-btn active-btn">BROWSE</a>
+                            <a href="#tryon-modal" class="retro-3d-btn">DRESS ME</a>
+                        </div>
+                    </div>
+
+                    <div class="leopard-side-panel"></div>
+                </div>
+
+                <div class="monitor-bottom-bar">
+                    <span>SHOES</span>
+                    <span>JEWELRY</span>
+                    <span>SCARVES</span>
+                    <span>PANTS</span>
+                    <span>SWEATERS</span>
+                    <span class="more-btn">MORE</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. VISUAL TRY-ON AVATAR MODAL -->
+    <div id="tryon-modal" class="modal-overlay">
+        <div class="modal-card retro-monitor-outer">
+            <a href="#features-modal" class="close-modal-btn">&times;</a>
+
+            <div class="clueless-monitor">
+                <div class="monitor-top-bar">
+                    <span class="top-title">YOUR WARDROBE </span>
+                    <span class="top-title right">VIRTUAL TRY-ON</span>
+                </div>
+
+                <div class="clueless-screen-grid">
+                    <div class="leopard-side-panel"></div>
+
+                    <div class="center-wardrobe-column tryon-center">
+                        <div class="clueless-slot-box avatar-box-container">
+                            <div class="slot-image-area avatar-slot">
+                                <svg class="girl-avatar-svg" viewBox="0 0 120 280" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="60" cy="28" r="14" fill="#fcd2b1" />
+                                    <path d="M 48 24 Q 60 10 72 24 Q 75 45 70 50 Q 50 50 48 24 Z" fill="#4a2e18" />
+                                    <rect x="56" y="42" width="8" height="12" fill="#fcd2b1" />
+                                    <path d="M 40 54 L 80 54 L 84 110 L 36 110 Z" fill="#f1c40f" stroke="#333" stroke-width="1.5" />
+                                    <path d="M 44 54 L 60 80 L 76 54 Z" fill="#ffffff" />
+                                    <path d="M 38 110 L 82 110 L 86 150 L 34 150 Z" fill="#f1c40f" stroke="#333" stroke-width="1.5" />
+                                    <line x1="50" y1="54" x2="50" y2="150" stroke="#a00" stroke-width="1" />
+                                    <line x1="70" y1="54" x2="70" y2="150" stroke="#a00" stroke-width="1" />
+                                    <line x1="36" y1="130" x2="84" y2="130" stroke="#a00" stroke-width="1" />
+                                    <rect x="46" y="150" width="10" height="90" fill="#fcd2b1" />
+                                    <rect x="64" y="150" width="10" height="90" fill="#fcd2b1" />
+                                    <rect x="45" y="170" width="12" height="60" fill="#ffffff" stroke="#ccc" stroke-width="1" />
+                                    <rect x="63" y="170" width="12" height="60" fill="#ffffff" stroke="#ccc" stroke-width="1" />
+                                    <path d="M 43 238 L 57 238 L 57 248 L 43 248 Z" fill="#111" />
+                                    <path d="M 63 238 L 77 238 L 77 248 L 63 248 Z" fill="#111" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="bottom-action-buttons-row">
+                            <a href="#shuffler-modal" class="retro-3d-btn">BROWSE</a>
+                            <a href="#tryon-modal" class="retro-3d-btn active-btn">DRESS ME</a>
+                        </div>
+                    </div>
+
+                    <div class="leopard-side-panel"></div>
+                </div>
+
+                <div class="monitor-bottom-bar">
+                    <span>SHOES</span>
+                    <span>JEWELRY</span>
+                    <span>SCARVES</span>
+                    <span>PANTS</span>
+                    <span>SWEATERS</span>
+                    <span class="more-btn">MORE</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. TAROT SUGGESTION MODAL -->
+    <div id="tarot-modal" class="modal-overlay">
+        <div class="modal-card tarot-phone-card">
+            <a href="#features-modal" class="close-modal-btn" style="color: #3b1d0c;">&times;</a>
+            <div class="tarot-screen-content">
+                <div class="tarot-phone-top">
+                    <div class="tarot-app-title">Ideal Match</div>
+                    <div class="tarot-subtitle">Tarot suggestion of the day!</div>
+                </div>
+
+                <div class="tarot-display-area">
+                    <img src="assets/jacket.png" alt="Left" class="floating-garment left-item">
+                    <div class="tarot-card-box">
+                        <div class="tarot-graphic-card"></div>
+                        <span class="tarot-card-name">THE FOOL</span>
+                    </div>
+                    <img src="assets/prada skirt.png" alt="Right" class="floating-garment right-item">
+                </div>
+
+                <div class="tarot-day-indicator">Day 6</div>
+
+                <div class="tarot-info-box">
+                    <div class="tarot-info-title">Significance and Mood:</div>
+                    <ul class="tarot-custom-bullets">
+                        <li>Carefree</li>
+                        <li>Playful patterns</li>
+                        <li>Flowy dresses symbolizing free-spirit</li>
+                    </ul>
+                </div>
+
+                <div class="tarot-bottom-nav">
+                    <span>⚙ Settings</span>
+                    <span>Features</span>
+                    <span>🏠 Hub</span>
+                    <span>👤 Profile</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. WEEKLY PLANNER MODAL -->
+    <div id="planner-modal" class="modal-overlay">
+        <div class="modal-card planner-screen-card">
+            <a href="#features-modal" class="close-modal-btn">&times;</a>
+            <div class="planner-top-header">
+                <h2 class="planner-main-heading">This week</h2>
+                <div class="planner-location-pill">Auckland, AKL</div>
+            </div>
+
+            <div class="planner-rows-stack">
+                <div class="planner-row-item">
+                    <span class="planner-day-pill">Mon</span>
+                    <span class="planner-outfit-desc">ivory knit • trousers</span>
+                    <span class="planner-temp">• 20°C</span>
+                </div>
+                <div class="planner-row-item">
+                    <span class="planner-day-pill">Tue</span>
+                    <span class="planner-outfit-desc">Blazer • skirt</span>
+                    <span class="planner-temp">• 19°C</span>
+                </div>
+                <div class="planner-row-item">
+                    <span class="planner-day-pill">Wed</span>
+                    <span class="planner-outfit-desc">Graphic tee • Jorts</span>
+                    <span class="planner-temp">• 22°C</span>
+                </div>
+                <div class="planner-row-item">
+                    <span class="planner-day-pill">Thu</span>
+                    <span class="planner-outfit-desc">Turtleneck • Denim</span>
+                    <span class="planner-temp">• 20°C</span>
+                </div>
+                <div class="planner-row-item">
+                    <span class="planner-day-pill">Fri</span>
+                    <span class="planner-outfit-desc">Wine dress • Kitten heels</span>
+                    <span class="planner-temp">• 21°C</span>
+                </div>
+                <div class="planner-row-item">
+                    <span class="planner-day-pill">Sat</span>
+                    <span class="planner-outfit-desc">Relaxed fit • Sneakers</span>
+                    <span class="planner-temp">• 19°C</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

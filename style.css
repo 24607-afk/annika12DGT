@@ -1,43 +1,38 @@
-/* --- CSS Reset & Variables --- */
+/* --- Core Reset & Styling --- */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
-    background-size: cover;
-    min-height: 100vh;
+    background-color: #0b0110;
     color: #ffffff;
     overflow-x: hidden;
 }
 
-/* --- Navigation Bar --- */
+/* --- Navigation --- */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
-    background: transparent;
+    padding: 20px 50px;
+    background: rgba(11, 1, 16, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 8px;
-}
-
-.logo-text {
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
     font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.logo-icon {
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .nav-links {
@@ -46,140 +41,115 @@ body {
 }
 
 .nav-links a {
-    color: #ffffff;
+    color: #b3a2c7;
     text-decoration: none;
     font-size: 15px;
-    font-weight: 400;
-    opacity: 0.9;
-    transition: opacity 0.3s;
+    transition: color 0.2s;
 }
 
 .nav-links a:hover {
-    opacity: 1;
+    color: #fff;
 }
 
 .btn-nav-signup {
-    background-color: #ffe6eb;
-    color: #4a154b;
-    border: none;
-    padding: 10px 24px;
-    border-radius: 20px;
-    font-weight: 600;
-    font-size: 15px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    background: #ff2a75;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: transform 0.2s, background 0.2s;
 }
 
-/* --- Hero Section Container --- */
+.btn-nav-signup:hover {
+    background: #e01d63;
+    transform: translateY(-2px);
+}
+
+/* --- Hero Section --- */
 .hero-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 60px;
-    min-height: calc(100vh - 90px);
+    padding: 60px 50px;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
-/* Purple Main Card Graphic */
 .hero-card {
-    background: linear-gradient(135deg, #4c0d55 0%, #881b99 50%, #e652f7 100%);
-    width: 100%;
-    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #180324, #2a0438);
+    border: 1px solid #5a1d73;
     border-radius: 24px;
-    padding: 60px;
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 40px;
+    padding: 50px;
     position: relative;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 40px rgba(90, 29, 115, 0.3);
 }
 
-/* --- Left Side: Typography & Text Content --- */
 .hero-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    max-width: 600px;
 }
 
 .hero-content h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 46px;
-    font-weight: 400;
+    font-size: 42px;
     line-height: 1.2;
-    margin-bottom: 24px;
-}
-
-.hero-content h1 span {
-    font-style: italic;
+    margin-bottom: 20px;
 }
 
 .hero-description {
+    color: #b3a2c7;
     font-size: 16px;
     line-height: 1.6;
-    margin-bottom: 24px;
-    opacity: 0.9;
+    margin-bottom: 25px;
 }
 
 .features-list {
-    list-style-type: none;
-    margin-bottom: 40px;
-}
-
-.features-list li {
-    font-size: 15px;
-    margin-bottom: 12px;
-    position: relative;
+    list-style-type: disc;
     padding-left: 20px;
-    opacity: 0.85;
+    color: #e2d4f2;
+    margin-bottom: 30px;
+    font-size: 15px;
+    line-height: 1.8;
 }
 
-/* Small bullet design match */
-.features-list li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #ffffff;
-}
-
-/* Form Styling */
 .signup-form {
     display: flex;
-    align-items: center;
-    gap: 20px;
+    gap: 12px;
 }
 
 .email-input {
-    background-color: #ffe4f0;
-    border: none;
-    padding: 16px 28px;
-    border-radius: 30px 0 30px 30px; /* Matching the custom skewed shape */
-    width: 280px;
-    font-size: 15px;
-    color: #4a154b;
-    outline: none;
+    padding: 12px 18px;
+    border-radius: 30px;
+    border: 1px solid #5a1d73;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 14px;
+    flex-grow: 1;
+    max-width: 300px;
 }
 
-.email-input::placeholder {
-    color: #4a154b;
-    opacity: 0.7;
+.email-input:focus {
+    outline: none;
+    border-color: #ff2a75;
 }
 
 .btn-submit {
-    background-color: #9c27b0;
+    background: #ff2a75;
     color: white;
-    border: 2px solid rgba(255,255,255,0.2);
-    padding: 16px 36px;
-    border-radius: 20px;
-    font-size: 16px;
-    font-weight: 500;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.2s;
 }
 
 .btn-submit:hover {
-    background-color: #b338c9;
+    background: #e01d63;
 }
 
-/* --- Right Side: Visual Components & Phone UI --- */
+/* --- Hero Visual Phone Mockup --- */
 .hero-visuals {
     position: relative;
     display: flex;
@@ -187,166 +157,643 @@ body {
     align-items: center;
 }
 
-/* Perfect Match Heart Tag */
 .heart-badge {
     position: absolute;
     top: -20px;
-    right: 10px;
-    z-index: 10;
+    left: -40px;
+    z-index: 5;
     display: flex;
     align-items: center;
-}
-
-.heart-shape {
-    background-color: #e63946;
-    padding: 20px;
-    border-radius: 50%;
-    width: 90px;
-    height: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 1.2;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    transform: rotate(-5deg);
 }
 
 .arrow-left {
-    font-size: 32px;
-    margin-right: -15px;
-    transform: rotate(-15deg);
+    font-size: 24px;
+    margin-right: -10px;
+    transform: rotate(-30deg);
 }
 
-/* Phone Layout Setup */
+.heart-shape {
+    background: #ff2a75;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 50% 50% 50% 0;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    transform: rotate(-15deg);
+    box-shadow: 0 4px 15px rgba(255, 42, 117, 0.4);
+}
+
 .phone-wrapper {
     position: relative;
     width: 260px;
-    height: 440px;
-}
-
-/* Background stacked angled card */
-.phone-shadow-card {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #2b0433;
-    border-radius: 24px;
-    transform: rotate(-10deg);
-    top: 10px;
-    left: -15px;
-    z-index: 1;
-    opacity: 0.7;
-}
-
-.phone-device {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    background-color: #190122;
-    border: 8px solid #ffffff;
-    border-radius: 28px;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-    transform: rotate(5deg);
+    background: #110217;
+    border: 6px solid #33123f;
+    border-radius: 36px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    padding: 15px;
 }
 
 .phone-header {
-    color: #a8a8a8;
-    font-size: 14px;
-    font-weight: 300;
+    font-family: 'VT323', monospace;
+    font-size: 16px;
+    text-align: center;
+    color: #b3a2c7;
     margin-bottom: 10px;
 }
 
-/* Clothes selector design template */
 .wardrobe-display {
+    background: #f7d6b1;
+    border-radius: 16px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    flex-grow: 1;
+    align-items: center;
+    gap: 10px;
+    min-height: 180px;
     justify-content: center;
 }
 
-.item-slot {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #0b0010;
-    border-radius: 12px;
-    padding: 10px;
-    height: 120px;
-}
-
-.item-image-placeholder {
-    font-size: 50px;
-}
-
-.nav-arrow {
-    font-size: 11px;
-    color: #9c27b0;
-    cursor: pointer;
-    user-select: none;
-}
-
-/* Bottom phone interactive controls */
 .phone-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 15px;
+    padding: 0 5px;
 }
 
 .phone-btn {
-    border: none;
-    border-radius: 14px;
-    padding: 8px 14px;
-    font-size: 11px;
-    font-weight: 500;
-    cursor: pointer;
+    font-family: 'VT323', monospace;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 4px;
 }
 
 .text-btn {
-    background-color: #4a1256;
-    color: #ff99f5;
+    color: #b3a2c7;
+    border: 1px solid #5a1d73;
 }
 
 .action-btn {
-    background-color: #c134d1;
+    background: #ff2a75;
     color: white;
 }
 
-.shoes-icon {
-    font-size: 24px;
-}
-
-/* Animated clicking indicator hand */
 .pointer-hand {
     position: absolute;
-    bottom: -15px;
+    bottom: -20px;
     right: -25px;
-    font-size: 38px;
-    transform: rotate(-35deg);
-    z-index: 5;
+    width: 45px;
+    z-index: 10;
 }
 
-/* Responsive Scaling Design Rules */
-@media (max-width: 992px) {
-    .hero-card {
-        grid-template-columns: 1fr;
-        padding: 40px;
-    }
-    .hero-visuals {
-        margin-top: 40px;
-    }
-    .navbar {
-        padding: 20px;
-    }
+/* --- Sections --- */
+.why-matters-section {
+    padding: 60px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+.pill-header {
+    background: rgba(179, 162, 199, 0.15);
+    color: #d1bfe4;
+    padding: 6px 16px;
+    border-radius: 20px;
+    width: fit-content;
+    font-size: 13px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(179, 162, 199, 0.3);
+}
 
+.section-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.capybara-img {
+    height: 50px;
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.info-card {
+    background: rgba(30, 6, 43, 0.6);
+    border: 1px solid #4a185e;
+    padding: 30px;
+    border-radius: 20px;
+    transition: transform 0.2s;
+}
+
+.info-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ff85b3;
+}
+
+.info-card p {
+    color: #b3a2c7;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* --- Footer --- */
+.site-footer {
+    background: #06000a;
+    border-top: 1px solid #33123f;
+    padding: 60px 50px 30px 50px;
+    margin-top: 60px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.brand-col h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+}
+
+.brand-col p {
+    color: #b3a2c7;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.footer-col h4 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: #ff85b3;
+}
+
+.footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-col ul li a {
+    color: #b3a2c7;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    color: #88729c;
+    font-size: 13px;
+}
+
+.footer-bottom a {
+    color: #ff85b3;
+    text-decoration: none;
+}
+
+/* --- Modal Overlays System --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(5, 0, 10, 0.85);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.modal-overlay:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-card {
+    background: #180324;
+    border: 2px solid #5a1d73;
+    border-radius: 24px;
+    padding: 30px;
+    width: 90%;
+    max-width: 550px;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.feature-card-item {
+    background: rgba(43, 4, 51, 0.8);
+    border: 1px solid #881b99;
+    padding: 18px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.feature-card-item:hover {
+    transform: translateY(-3px);
+    background: #3b0647;
+}
+
+.unlocked-badge {
+    background: #a8e6cf;
+    color: #110217;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #ffffff;
+    font-size: 26px;
+    text-decoration: none;
+    z-index: 10;
+}
+
+/* --- Authentic 90s Clueless Computer Screen Layout --- */
+.retro-monitor-outer {
+    background: #0d0112 !important;
+    border: 6px solid #1a0224 !important;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+    max-width: 720px !important;
+    padding: 12px !important;
+}
+
+.clueless-monitor {
+    border: 2px solid #2d043b;
+    padding: 8px;
+    background: #0d0112;
+}
+
+.monitor-top-bar {
+    display: flex;
+    justify-content: space-between;
+    background: #11011a;
+    padding: 4px 10px;
+    border: 1px solid #4a185e;
+    font-family: 'VT323', monospace;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #e2d4f2;
+}
+
+.clueless-screen-grid {
+    display: grid;
+    grid-template-columns: 140px 1fr 140px;
+    background-color: #11011a;
+    border: 2px solid #4a185e;
+    margin: 6px 0;
+    min-height: 410px;
+}
+
+/* Leopard Print Side Panels */
+.leopard-side-panel {
+    background-color: #d1b194;
+    background-image:
+        radial-gradient(ellipse at 30% 30%, #54301d 12%, transparent 13%),
+        radial-gradient(ellipse at 70% 65%, #54301d 10%, transparent 11%),
+        radial-gradient(ellipse at 45% 80%, #54301d 14%, transparent 15%),
+        radial-gradient(ellipse at 80% 20%, #422416 9%, transparent 10%),
+        radial-gradient(ellipse at 15% 60%, #422416 11%, transparent 12%);
+    background-size: 70px 70px;
+    border: 1px solid #2d043b;
+}
+
+.center-wardrobe-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: linear-gradient(to bottom, #eef3f0, #d5ded9);
+}
+
+.clueless-slot-box {
+    background: #ffffff;
+    border: 2px solid #333;
+    width: 85%;
+    height: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+}
+
+.slot-image-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.garment-img {
+    max-height: 95px;
+    max-width: 85%;
+    object-fit: contain;
+}
+
+.embedded-arrow-bar {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    width: 85%;
+    background: #b5c2bc;
+    padding: 3px;
+    border: 1px solid #7a8a82;
+    border-top: none;
+    margin-bottom: 8px;
+}
+
+.retro-arrow-btn {
+    background: #e2e8e5;
+    border: 1px outset #fff;
+    font-size: 11px;
+    font-family: 'VT323', monospace;
+    font-weight: bold;
+    padding: 2px 14px;
+    cursor: pointer;
+    color: #111;
+}
+
+.retro-arrow-btn:active {
+    border-style: inset;
+    background: #cbd3ce;
+}
+
+.bottom-action-buttons-row {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 8px;
+}
+
+.retro-3d-btn {
+    background: #8e9aaf;
+    color: #111;
+    border: 3px outset #cbd5e1;
+    padding: 4px 22px;
+    font-family: 'VT323', monospace;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.retro-3d-btn.active-btn {
+    background: #6c757d;
+    color: #fff;
+    border-style: inset;
+}
+
+.avatar-box-container {
+    height: 245px !important;
+}
+
+.avatar-slot {
+    height: 100%;
+}
+
+.girl-avatar-svg {
+    height: 95%;
+}
+
+.monitor-bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'VT323', monospace;
+    font-size: 13px;
+    color: #b3a2c7;
+    padding: 6px 4px 0 4px;
+}
+
+.more-btn {
+    color: #ff4e50;
+    cursor: pointer;
+}
+
+/* --- Tarot Phone Modal Styling --- */
+.tarot-phone-card {
+    background-color: #f7d6b1 !important;
+    color: #110217 !important;
+    border: 4px solid #4a2e18 !important;
+    max-width: 380px !important;
+    padding: 20px !important;
+    border-radius: 30px !important;
+}
+
+.tarot-screen-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.tarot-phone-top {
+    margin-bottom: 5px;
+}
+
+.tarot-app-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3b1d0c;
+}
+
+.tarot-subtitle {
+    font-size: 11px;
+    font-style: italic;
+    color: #633f24;
+}
+
+.tarot-display-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.floating-garment {
+    width: 55px;
+    position: absolute;
+    z-index: 2;
+}
+
+.left-item { left: 10px; }
+.right-item { right: 10px; width: 65px; }
+
+.tarot-card-box {
+    background: #fff;
+    border: 3px solid #2b1406;
+    padding: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.tarot-graphic-card {
+    width: 90px;
+    height: 140px;
+    background: linear-gradient(135deg, #f39c12, #d35400);
+    position: relative;
+    border: 1px solid #333;
+}
+
+.tarot-card-name {
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 4px;
+    display: block;
+    color: #110217;
+}
+
+.tarot-day-indicator {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #d35400;
+    margin: 5px 0;
+}
+
+.tarot-info-box {
+    text-align: left;
+    width: 100%;
+    padding: 0 15px;
+    font-size: 12px;
+}
+
+.tarot-info-title {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.tarot-custom-bullets {
+    padding-left: 15px;
+    margin-top: 3px;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.tarot-bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 15px;
+    border-top: 1px solid #d0a37c;
+    padding-top: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #3b1d0c;
+}
+
+/* --- Weekly Planner Modal Styling --- */
+.planner-screen-card {
+    background: #070921 !important;
+    border: 2px solid #00bfff !important;
+    box-shadow: 0 0 25px rgba(0, 191, 255, 0.4);
+    max-width: 420px !important;
+    padding: 25px !important;
+    border-radius: 20px !important;
+}
+
+.planner-top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.planner-main-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.planner-location-pill {
+    background: #f7d6b1;
+    color: #070921;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 20px;
+}
+
+.planner-rows-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.planner-row-item {
+    background: #f7d6b1;
+    border-radius: 30px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #070921;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.planner-day-pill {
+    background: #ff2a75;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 15px;
+}
+
+.planner-outfit-desc {
+    flex-grow: 1;
+    padding-left: 12px;
+    font-size: 12px;
+}
+
+.planner-temp {
+    font-size: 12px;
+    font-weight: bold;
+}
